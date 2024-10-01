@@ -8,7 +8,7 @@ app.use(express.json());
 
 var regex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/
-app.get('/', async (readd .q, res)=>{
+app.get('/', async (req, res)=>{
     const users = await mongo.find({})
     res.status(200).json(users)
 })
